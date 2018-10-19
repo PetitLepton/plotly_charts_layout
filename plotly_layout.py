@@ -28,7 +28,7 @@ def layout_by_line_height(
     light_text_color=LIGHT_TEXT_COLOR,
     n_canva=12,
     canva_width=600,
-    left_margin=80,
+    left_margin=40,
     right_margin=80,
     title="title",
     subtitle="subtitle",
@@ -131,7 +131,6 @@ def layout_by_line_height(
     width = canva_width + margin["l"] + margin["r"]
 
     titles_left = -left_margin / canva_width
-    y_label_left = -left_position_min / canva_width
 
     labels = []
     if subtitle_labels:
@@ -149,7 +148,7 @@ def layout_by_line_height(
         ),
         dict(
             **parameters,
-            x=y_label_left,
+            x=titles_left,
             xanchor="left",
             y=1 + y_label_bottom / canva_height,
             font=dict(size=font_size, color=dark_text_color),
