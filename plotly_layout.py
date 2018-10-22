@@ -157,7 +157,7 @@ def layout_by_line_height(
         dict(
             **parameters,
             x=0.5,
-            xanchor="middle",
+            xanchor="center",
             y=-1.0 * x_label_height / canva_height,
             font=dict(size=font_size, color=light_text_color),
             text=xlabel
